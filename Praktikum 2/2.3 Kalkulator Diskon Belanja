@@ -1,0 +1,18 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+ 
+int main(){ 
+    int hargaBarang; 
+    int diskon; 
+    int hargaAkhir; 
+    cout << "Masukkan harga barang: "; 
+    cin >> hargaBarang; 
+    cout << "Masukkan diskon: " ; 
+    cin >> diskon ; 
+    hargaAkhir = hargaBarang * (100-diskon) / 100; 
+    cout <<left; 
+    cout << setw (15) << "Harga Barang" << setw (15) << "Diskon" << setw (15) << "Harga Akhir" << endl; 
+    cout << setw (15) << hargaBarang<< setw (15) << (to_string(diskon) + "%") << setw (15) << hargaAkhir << endl; 
+return 0; 
+} 
