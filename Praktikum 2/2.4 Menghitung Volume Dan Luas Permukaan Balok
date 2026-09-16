@@ -1,0 +1,24 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+
+int main() { 
+    int p; 
+    int l; 
+    int t;
+
+    cout << "Masukkan panjang: "; 
+    cin >> p; 
+    cout << "Masukkan lebar: "; 
+    cin >> l; 
+    cout << "Masukkan tinggi: "; 
+    cin >> t; 
+
+    int volume = p * l * t; 
+    int luas = 2*(p*l+p*t+l*t); 
+    
+    cout <<left; 
+    cout << setw (18) << "Panjang" << setw (18) << "Lebar" << setw (18) << "Tinggi" << setw (18) << "Volume" << setw (18) << "Luas Permukaan" << endl; 
+    cout << setw (18) << p << setw (18) << l << setw (18) << t << setw (18) << volume << setw (18) << luas << endl; 
+return 0; 
+}   
