@@ -1,0 +1,28 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+
+int main(){ 
+    string nama; 
+    int jamKerja; 
+    int tarifPerJam; 
+    int gaji; 
+ 
+    cout << "Masukkan nama: "; 
+    getline(cin, nama); 
+    cout << "Masukkan jam kerja: "; 
+    cin >> jamKerja; 
+    cout << "Masukkan tarif per jam: "; 
+    cin >> tarifPerJam; 
+    
+    gaji = jamKerja * tarifPerJam; 
+ 
+    cout <<left; 
+    cout << setw (15) << "Nama" << setw (15) << "Jam kerja" << 
+setw (15) << "Tarif per jam" << setw (15) << "Gaji total" << 
+endl; 
+    cout << setw (15) << nama << setw (15) << jamKerja << setw 
+(15) << tarifPerJam << setw (15) << gaji << endl; 
+    
+    return 0; 
+} 
