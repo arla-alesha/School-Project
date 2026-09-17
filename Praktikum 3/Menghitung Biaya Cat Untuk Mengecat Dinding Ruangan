@@ -1,0 +1,79 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main () {
+    // 1. Deklarasi variabel sesuai deskripsi soal
+    double panjang = 0;
+    double lebar = 0;
+    double tinggi = 0;
+    double luas_dinding = 0;
+    double liter_cat = 0;
+    double total_biaya = 0;
+    int harga_cat_liter = 0;
+
+    cout << "====== STUDI KASUS MENGHITUNG BIAYA CAT DINDING ======" << endl;
+
+    // 2. Menerima input data dimensi ruangan dan harga cat
+    cout << "Masukkan Panjang Ruangan (meter) : ";
+    cin >> panjang;
+
+    cout << "Masukkan Lebar Ruangan (meter) : ";
+    cin >> lebar;
+
+    cout << "Masukkan Tinggi Ruangan (meter) : ";
+    cin >> tinggi;
+
+    cout << "Masukkan Harga Cat Per Liter (Rp): ";
+    cin >> harga_cat_liter;
+
+    cout << endl;
+
+    // 3. Rumus Perhitungan
+    // Menghitung luas total 4 sisi dinding
+    luas_dinding = 2 * (panjang * tinggi) + 2 * (lebar * tinggi);
+
+    // Asumsi: 1 liter cat dapat mengecat 10 m2
+    liter_cat = luas_dinding / 10;
+
+    // Menghitung total biaya pembelian cat
+    total_biaya = liter_cat * harga_cat_liter;
+
+    // 4. Menampilkan hasil
+    cout << "====== HASIL PERHITUNGAN ======" << endl;
+
+    cout << left
+         << setw(18) << "LUAS_DINDING"
+         << setw(18) << "LITER_CAT (L)"
+         << setw(18) << "HARGA_PER_LITER"
+         << setw(18) << "TOTAL_BIAYA" << endl;
+
+    cout << "--------------------------------------------------------------------------" << endl;
+
+    cout << fixed << setprecision(3);
+
+    cout << left
+         << setw(18) << luas_dinding
+         << setw(18) << liter_cat
+         << "Rp " << setw(15) << harga_cat_liter
+         << "Rp " << total_biaya << endl;
+
+    // 5. Kategori jumlah cat yang dibutuhkan
+    cout << "Kategori Jumlah Cat : ";
+
+    if (liter_cat > 10) {
+        cout << "Banyak Cat Dibutuhkan" << endl;
+    } 
+    else if (liter_cat >= 5 && liter_cat <= 10) {
+        cout << "Sedang" << endl;
+    } 
+    else {
+        cout << "Sedikit" << endl;
+    }
+
+    cout << "--------------------------------------------------------------------------" << endl;
+
+    return 0;
+}
