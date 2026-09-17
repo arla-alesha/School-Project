@@ -1,0 +1,30 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+ 
+int main() { 
+    double panjangRuangan; 
+    double lebarRuangan; 
+    double tinggiRuangan; 
+    double hargaCatPerLiter; 
+    double luasDinding = 2 * (panjangRuangan *tinggiRuangan) + 2 * (lebarRuangan * tinggiRuangan); 
+    double jumlahLiterCat = luasDinding / 10; 
+    double biayaCat = jumlahLiterCat * hargaCatPerLiter; 
+ 
+    cout << "Masukan Panjang ruangan: "; 
+    cin >> panjangRuangan; 
+    cout << "Masukan Lebar ruangan: "; 
+    cin >> lebarRuangan; 
+    cout << "Masukan Tinggi ruangan: "; 
+    cin >> tinggiRuangan; 
+    cout << "Masukan harga cat per liter: "; 
+    cin >> hargaCatPerLiter; 
+ 
+    cout << fixed << setprecision(2); 
+    cout << "Luas Dinding: " << luasDinding << " m^2" << endl; 
+    cout << "Jumlah Liter Cat yang Dibutuhkan: " << 
+    jumlahLiterCat << " liter" << endl; 
+    cout << "Biaya Cat: Rp " << biayaCat << endl; 
+
+return 0; 
+}
