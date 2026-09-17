@@ -8,7 +8,6 @@ int main() {
     double suhuHari3; 
     double suhuHari4; 
     double suhuHari5; 
-    double rataRata; 
  
     cout << fixed << setprecision(1);  
  
@@ -22,6 +21,9 @@ int main() {
     cout << "Masukan Suhu Hari 4: "; 
     cin >> suhuHari4; 
     cout << "Masukan Suhu Hari 5: "; 
+
+    double rataRata; 
+
     cin >> suhuHari5; rataRata = (suhuHari1 + suhuHari2 + suhuHari3 + suhuHari4 + suhuHari5) / 5; 
     cout << "Rata-rata Suhu: " << rataRata << endl; 
 
