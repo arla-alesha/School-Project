@@ -1,0 +1,29 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+
+int main() { 
+    int statusBeratBadanIdeal; 
+
+    double height; 
+    double weight; 
+    double BMI = weight / (height /100 * height /100); 
+
+    cout << "Masukkan height: "; 
+    cin >> height; 
+    cout << "Masukkan weight: "; 
+    cin >> weight; 
+    cout << fixed << setprecision(2); 
+ 
+    if (BMI >= 18.5 && BMI <= 24.9) { 
+        statusBeratBadanIdeal = 1; }
+        else { 
+            statusBeratBadanIdeal = 0; 
+} 
+        
+    cout << left; 
+    cout << setw (18) << "Height: " << setw (18) << "Weight: " << setw (18) << "BMI: " << setw (18) << "Status Berat Badan Ideal: " << endl; 
+    cout << setw (18) << height << setw (18) << weight << setw (18) << BMI << setw (18) << (statusBeratBadanIdeal ? "Ya" : "Tidak") << endl; 
+
+return 0; 
+} 
