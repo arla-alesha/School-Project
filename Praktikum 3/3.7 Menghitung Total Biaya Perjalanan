@@ -1,0 +1,252 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+int main () {
+    int km = 0;
+    double konsumsi_bbm = 0; // KM / L
+    double bensin_terpakai = 0; // L
+    double total_biaya_bensin = 0;
+        int Harga_BBM_Liter = 0;
+    int pilihan = 0;
+    int mencari = 0;
+
+    string nama_kendaraan = "";
+
+    cout << "====== PILIH_KENDARAAN_MU ======" << endl;
+    cout << "1. Motor" << endl;
+    cout << "2. Mobil" << endl;
+    cout << "3. Pesawat" << endl;
+    cout << "4. kapal" << endl;
+    cout << "TENTUKAN_PILIHANMU :" << endl;
+    cin >> pilihan;
+    cout << endl;
+
+
+    switch (pilihan) {
+         case 1: {
+            nama_kendaraan = "Motor";
+
+            
+            cout << "1. Mencari Total Biaya Bensin: " << endl;
+            cout << "2. Mencari Total Jarak Tempuh: " << endl;
+            cout << "3. Mencari Total Bensin Terpakai: " << endl;
+            cout << "====== TENTUKAN_PILIHANMU ======" << endl;
+            cin >> mencari;
+
+            if (mencari ==1) {
+                            cout << "Jarak_Tempuh (KM) :";
+            cin >> km;
+            cout << "Konsumsi_Bensin/KM (L) :";
+            cin >> konsumsi_bbm;
+            cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                total_biaya_bensin = (km / konsumsi_bbm) * Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (15) << "JARAK_TEMPUH" << setw (25) << "KONSUMSI_BENSIN (km/l)" << setw (20) << fixed << setprecision (5) << "TOTAL_BIAYA_BENSIN" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (15) << km << setw (25) << konsumsi_bbm << setw (20) << fixed << setprecision (5) << total_biaya_bensin << endl;
+                 cout << "Status Efisiensi : ";
+                if (konsumsi_bbm > 15) {
+                    cout << "Efisien" << endl;
+                } else if (konsumsi_bbm >= 10 && konsumsi_bbm <= 15) {
+                    cout << "Cukup Efisien" << endl;
+                } else {
+                    cout << "Boros" << endl;
+                }
+                cout << "--------------------------------" << endl;
+            } else if (mencari ==2) {
+                cout << "bensin_terpakai: ";
+                cin >> bensin_terpakai;
+                cout << "Konsumsi_Bensin/KM (L)";
+                cin >> konsumsi_bbm;
+                
+                km = bensin_terpakai * konsumsi_bbm;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (13) << "BENSIN_TERPAKAI (L)" << setw (25) << "KONSUMSI_BENSIN (km/l)" << setw (15) << fixed << setprecision (5) << "Total_Jarak_Tempuh" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (13) << bensin_terpakai << setw (25) << konsumsi_bbm << setw (15) << fixed << setprecision (5) << km << endl;
+               
+
+            } else if (mencari ==3) {
+                    cout << "Total_Bensin_Terpakai: " << endl;
+                cout << "Total_Biaya_Pembelian_Bensin" << endl;
+                cin >> total_biaya_bensin;
+                 cout << "harga_BBM  : " << endl;
+            cin >> Harga_BBM_Liter;
+                bensin_terpakai = total_biaya_bensin / Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (20) << "Total_Biaya_Pembelian" << setw (13) << "Harga_BBM_Liter" << setw (25) << fixed << setprecision (5) << "TOTAL_Bensin_Terpakai" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (20) << total_biaya_bensin << setw (13) << Harga_BBM_Liter << setw (25) << fixed << setprecision (5) << bensin_terpakai << endl;
+            }
+            break;
+        } 
+        case 2: {
+            nama_kendaraan = "Mobil";
+             cout << "1. Mencari Total Biaya Bensin: " << endl;
+            cout << "2. Mencari Total Jarak Tempuh: " << endl;
+            cout << "3. Mencari Total Bensin Terpakai: " << endl;
+            cout << "====== TENTUKAN_PILIHANMU ======" << endl;
+            cin >> mencari;
+
+            if (mencari ==1) {
+                            cout << "Jarak_Tempuh (KM) :";
+            cin >> km;
+            cout << "Konsumsi_Bensin/KM (L) :";
+            cin >> konsumsi_bbm;
+                cout << "Total_Biaya_Bensin :";
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                total_biaya_bensin = (km / konsumsi_bbm) * Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (15) << "JARAK_TEMPUH" << setw (25) << "KONSUMSI_BENSIN (km/l)" << setw (20) << fixed << setprecision (5) << "TOTAL_BIAYA_BENSIN" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (15) << km << setw (25) << konsumsi_bbm << setw (20) << fixed << setprecision (5) << total_biaya_bensin << endl;
+                 cout << "Status Efisiensi : ";
+                if (konsumsi_bbm > 15) {
+                    cout << "Efisien" << endl;
+                } else if (konsumsi_bbm >= 10 && konsumsi_bbm <= 15) {
+                    cout << "Cukup Efisien" << endl;
+                } else {
+                    cout << "Boros" << endl;
+                }
+                cout << "--------------------------------" << endl;
+            } else if (mencari ==2) {
+                cout << "bensin_terpakai: ";
+                cin >> bensin_terpakai;
+                cout << "Konsumsi_Bensin/KM (L)";
+                cin >> konsumsi_bbm;
+                km = bensin_terpakai * konsumsi_bbm;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (13) << "BENSIN_TERPAKAI (L)" << setw (25) << "KONSUMSI_BENSIN (km/l)" << setw (15) << fixed << setprecision (5) << "Total_Jarak_Tempuh" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (13) << bensin_terpakai << setw (25) << konsumsi_bbm << setw (15) << fixed << setprecision (5) << km << endl;
+
+            } else if (mencari ==3) {
+                    cout << "Total_Bensin_Terpakai: " << endl;
+                cout << "Total_Biaya_Pembelian_Bensin" << endl;
+                cin >> total_biaya_bensin;
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                bensin_terpakai = total_biaya_bensin / Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (20) << "Total_Biaya_Pembelian" << setw (13) << "Harga_BBM_Liter" << setw (25) << fixed << setprecision (5) << "TOTAL_Bensin_Terpakai" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (20) << total_biaya_bensin << setw (13) << Harga_BBM_Liter << setw (25) << fixed << setprecision (5) << bensin_terpakai << endl;
+            }
+            break;
+        } 
+          case 3: {
+            nama_kendaraan = "Pesawat";
+            cout << "1. Mencari Total Biaya Bensin: " << endl;
+            cout << "2. Mencari Total Jarak Tempuh: " << endl;
+            cout << "3. Mencari Total Bensin Terpakai: " << endl;
+            cout << "====== TENTUKAN_PILIHANMU ======" << endl;
+            cin >> mencari;
+
+            if (mencari ==1) {
+                            cout << "Jarak_Tempuh (NM) :";
+            cin >> km;
+            cout << "Konsumsi_Avtur/NM (KG) :";
+            cin >> konsumsi_bbm;
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                total_biaya_bensin = (km / konsumsi_bbm) * Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (15) << "JARAK_TEMPUH_(NM)" << setw (25) << "KONSUMSI_BBM_(NM/KG)" << setw (20) << fixed << setprecision (5) << "TOTAL_BIAYA_BENSIN" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (15) << km << setw (25) << konsumsi_bbm << setw (20) << fixed << setprecision (5) << total_biaya_bensin << endl;
+                 cout << "Status Efisiensi : ";
+                if (konsumsi_bbm > 0.12) {
+                    cout << "Efisien" << endl;
+                } else if (konsumsi_bbm >= 0.06 && konsumsi_bbm <= 0.12) {
+                    cout << "Cukup Efisien" << endl;
+                } else {
+                    cout << "Boros" << endl;
+                }
+                cout << "--------------------------------" << endl;
+            } else if (mencari ==2) {
+                cout << "Avtur_terpakai: ";
+                cin >> bensin_terpakai;
+                cout << "Konsumsi_Avtur/NM (KG)";
+                cin >> konsumsi_bbm;
+                km = bensin_terpakai * konsumsi_bbm;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (13) << "Avtur_TERPAKAI_(KG)" << setw (25) << "KONSUMSI_BBM_(NM/KG)" << setw (15) << fixed << setprecision (5) << "Total_Jarak_Tempuh_(NM)" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (13) << bensin_terpakai << setw (25) << konsumsi_bbm << setw (15) << fixed << setprecision (5) << km << endl;
+
+            } else if (mencari ==3) {
+                    cout << "Total_BBM_Terpakai: " << endl;
+                cout << "Total_Biaya_Pembelian_Bensin" << endl;
+                cin >> total_biaya_bensin;
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                bensin_terpakai = total_biaya_bensin / Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (20) << "Total_Biaya_Pembelian" << setw (13) << "Harga_BBM_Liter" << setw (25) << fixed << setprecision (5) << "TOTAL_Bensin_Terpakai" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (20) << total_biaya_bensin << setw (13) << Harga_BBM_Liter << setw (25) << fixed << setprecision (5) << bensin_terpakai << endl;
+            }
+            break;
+        } 
+        case 4: {
+            nama_kendaraan = "Kapal";
+            cout << "1. Mencari Total Biaya Bensin: " << endl;
+            cout << "2. Mencari Total Jarak Tempuh: " << endl;
+            cout << "3. Mencari Total Bensin Terpakai: " << endl;
+            cout << "====== TENTUKAN_PILIHANMU ======" << endl;
+            cin >> mencari;
+
+            if (mencari ==1) {
+                            cout << "Jarak_Tempuh (NM) :";
+            cin >> km;
+            cout << "Konsumsi_BBM_(NM/L) :";
+            cin >> konsumsi_bbm;
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                total_biaya_bensin = (km / konsumsi_bbm) * Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (15) << "JARAK_TEMPUH" << setw (25) << "KONSUMSI_BENSIN (NM/L)" << setw (20) << fixed << setprecision (5) << "TOTAL_BIAYA_BBM" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (15) << km << setw (25) << konsumsi_bbm << setw (20) << fixed << setprecision (5) << total_biaya_bensin << endl;
+                 cout << "Status Efisiensi : ";
+                if (konsumsi_bbm > 0.4) {
+                    cout << "Efisien" << endl;
+                } else if (konsumsi_bbm >= 0.2 && konsumsi_bbm <= 0.4) {
+                    cout << "Cukup Efisien" << endl;
+                } else {
+                    cout << "Boros" << endl;
+                }
+                cout << "--------------------------------" << endl;
+            } else if (mencari ==2) {
+                cout << "BBM_terpakai: ";
+                cin >> bensin_terpakai;
+                cout << "Konsumsi_BBM_(NM/L)";
+                cin >> konsumsi_bbm;
+                km = bensin_terpakai * konsumsi_bbm;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (13) << "BBM_TERPAKAI (L)" << setw (25) << "KONSUMSI_BBM (NM/L)" << setw (15) << fixed << setprecision (5) << "Total_Jarak_Tempuh_(NM)" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (13) << bensin_terpakai << setw (25) << konsumsi_bbm << setw (15) << fixed << setprecision (5) << km << endl;
+
+            } else if (mencari ==3) {
+                    cout << "Total_BBM_Terpakai: " << endl;
+                cout << "Total_Biaya_Pembelian_BBM" << endl;
+                cin >> total_biaya_bensin;
+                 cout << "harga_BBM  : ";
+            cin >> Harga_BBM_Liter;
+                bensin_terpakai = total_biaya_bensin / Harga_BBM_Liter;
+                cout << left << setw (18) << "NAMA_KENDARAAN" << setw (20) << "Total_Biaya_BBM" << setw (13) << "Harga_BBM_Liter" << setw (25) << fixed << setprecision (5) << "TOTAL_BBM_Terpakai" << endl;
+                 cout << " ----------------------------------------------------------------------------------------------" << endl;
+                cout << left << setw (18) << nama_kendaraan << setw (20) << total_biaya_bensin << setw (13) << Harga_BBM_Liter << setw (25) << fixed << setprecision (5) << bensin_terpakai << endl;
+            }
+            break;
+        } 
+         
+    }
+   return 0;
+}
+
+/* ====== STUDI KASUS 8 - MENGHITUNG BIAYA CAT DINDING ======
+Masukkan Panjang Ruangan (meter) : 45
+Masukkan Lebar Ruangan (meter)   : 45
+Masukkan Tinggi Ruangan (meter)  : 45
+Masukkan Harga Cat Per Liter (Rp): 90000
+
+====== HASIL PERHITUNGAN ======
+LUAS_DINDING   LITER_CAT (L)  HARGA_PER_LITERTOTAL_BIAYA    
+--------------------------------------------------------------------------------------------
+8100.000       810.000        Rp90000          Rp72900000.000
+Kategori Jumlah Cat : Banyak Cat Dibutuhkan
+-------------------------------------------------------------------------------------------- */
