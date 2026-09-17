@@ -7,14 +7,16 @@ int main() {
 
     double height; 
     double weight; 
-    double BMI = weight / (height /100 * height /100); 
 
     cout << "Masukkan height: "; 
     cin >> height; 
     cout << "Masukkan weight: "; 
     cin >> weight; 
+
     cout << fixed << setprecision(2); 
- 
+
+    double BMI = weight / (height /100 * height /100); 
+
     if (BMI >= 18.5 && BMI <= 24.9) { 
         statusBeratBadanIdeal = 1; }
         else { 
