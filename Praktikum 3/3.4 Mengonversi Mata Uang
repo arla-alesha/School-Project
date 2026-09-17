@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int pilihan;
+    double rupiah, kurs, hasil;
+    string mataUang;
+    
+    cout << "1. Dolar Amerika (USD)\n";
+    cout << "2. Euro (EUR)\n";
+    cout << "3. Yen Jepang (JPY)\n";
+    cout << "4. Rupee India (INR)\n";
+    cout << "5. Rial Arab Saudi (SAR)\n";
+    cout << "6. Won Korea (KRW)\n";
+    cout << "7. Ringgit Malaysia (MYR)\n";
+    cout << "8. Baht Thailand (THB)\n";
+    cout << "Pilih mata uang tujuan (1-8):";
+    cin >> pilihan;
+    
+    if (pilihan == 1) mataUang = "USD (Dolar)";
+    else if (pilihan == 2) mataUang = "EUR (Euro)";
+    else if (pilihan == 3) mataUang = "JPY (Yen)";
+    else if (pilihan == 4) mataUang = "INR (Rupee)";
+    else if (pilihan == 5) mataUang = "SAR (Rial)";
+    else if (pilihan == 6) mataUang = "KRW (Won)";
+    else if (pilihan == 7) mataUang = "MYR (Ringgit)";
+    else if (pilihan == 8) mataUang = "THB (Baht)";
+    else {
+        cout << "\nPilihan tidak valid! Program dihentikan. \n";
+    
+    return 0;
+}
