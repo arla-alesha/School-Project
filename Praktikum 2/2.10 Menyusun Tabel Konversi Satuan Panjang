@@ -1,0 +1,21 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+ 
+int main() { 
+    cout << left; 
+    cout << setw(12) << "Meter" 
+         << setw(15) << "Sentimeter" 
+         << setw(15) << "Milimeter" 
+         << setw(15) << "Kilometer" << endl; 
+ 
+    for (int meter = 1; meter <= 10; meter++) { 
+        double sentimeter = meter * 100; 
+        double milimeter = meter * 1000; 
+        double kilometer = meter / 1000.0; 
+
+        cout << setw(12) << meter << setw(15) << sentimeter << setw(15) << milimeter << setw(15) << fixed << setprecision(3) << kilometer << endl; 
+    } 
+
+    return 0; 
+} 
