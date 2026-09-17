@@ -1,0 +1,40 @@
+#include <iostream> 
+#include <iomanip> 
+using namespace std; 
+
+int main() { 
+    double suhuHari1; 
+    double suhuHari2; 
+    double suhuHari3; 
+    double suhuHari4; 
+    double suhuHari5; 
+    double suhu; 
+ 
+    cout << fixed << setprecision(1);  
+ 
+    cout << left; 
+    cout << "Masukan Suhu Hari 1: "; 
+    cin >> suhuHari1; 
+    cout << "Masukan Suhu Hari 2: "; 
+    cin >> suhuHari2; 
+    cout << "Masukan Suhu Hari 3: "; 
+    cin >> suhuHari3; 
+    cout << "Masukan Suhu Hari 4: "; 
+    cin >> suhuHari4; 
+    cout << "Masukan Suhu Hari 5: "; 
+    cin >> suhuHari5; suhu = (suhuHari1 + suhuHari2 + suhuHari3 + suhuHari4 + suhuHari5) / 5; 
+    cout << "Rata-rata Suhu: " << suhu << endl; 
+
+//Menentukan jika rata-rata suhu lebih dari 30.0°C, tampilkan "Cuaca Panas".Jika rata-rata suhu antara 20.0°C hingga 30.0°C, tampilkan "Cuaca Normal".Jika rata-rata suhu kurang dari 20.0°C, tampilkan "Cuaca Dingin".
+    if (suhu > 30.0) {
+        cout << "Cuaca Panas";
+    }
+    else if (suhu >= 20.0 && suhu <=30.0) {
+        cout << "Cuaca Normal";
+    }
+    else if (suhu < 20.0) {
+        cout << "Cuaca Dingin";
+    }
+
+return 0;
+}
