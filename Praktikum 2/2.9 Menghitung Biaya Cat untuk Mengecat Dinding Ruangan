@@ -6,10 +6,7 @@ int main() {
     double panjangRuangan; 
     double lebarRuangan; 
     double tinggiRuangan; 
-    double hargaCatPerLiter; 
-    double luasDinding = 2 * (panjangRuangan *tinggiRuangan) + 2 * (lebarRuangan * tinggiRuangan); 
-    double jumlahLiterCat = luasDinding / 10; 
-    double biayaCat = jumlahLiterCat * hargaCatPerLiter; 
+    double hargaCatPerLiter;
  
     cout << "Masukan Panjang ruangan: "; 
     cin >> panjangRuangan; 
@@ -21,9 +18,13 @@ int main() {
     cin >> hargaCatPerLiter; 
  
     cout << fixed << setprecision(2); 
+
+    double luasDinding = 2 * (panjangRuangan *tinggiRuangan) + 2 * (lebarRuangan * tinggiRuangan); 
+    double jumlahLiterCat = luasDinding / 10; 
+    double biayaCat = jumlahLiterCat * hargaCatPerLiter; 
+
     cout << "Luas Dinding: " << luasDinding << " m^2" << endl; 
-    cout << "Jumlah Liter Cat yang Dibutuhkan: " << 
-    jumlahLiterCat << " liter" << endl; 
+    cout << "Jumlah Liter Cat yang Dibutuhkan: " << jumlahLiterCat << " liter" << endl; 
     cout << "Biaya Cat: Rp " << biayaCat << endl; 
 
 return 0; 
