@@ -1,0 +1,90 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    string nama;
+    char posisi;
+    double jamkerja;
+    string A = "magang";
+    string B = "staff junior";
+    string C = "staff senior";
+    string D = "team leader";
+    string E = "kepala departemen";
+    int ulangi;
+    do {
+    cout << "masukkan nama :" << endl;
+    cin >> nama;
+    
+    cout << "masukkan posisi :" << endl;
+    cout << "magang (A)"<< endl;
+    cout << "staff junior (B)" << endl;
+    cout << "staff senior (C)" << endl;
+    cout << "team leader (D)" << endl;
+    cout << "kepala departemen (E)" << endl;
+    cin >> posisi;
+
+    cout << "jam kerja :" << endl;
+    cin >> jamkerja;
+
+    cout << left << setw(15) << "NAMA" << setw(15) << "POSISI" << setw(15) << "JAM KERJA" << setw(10) << "GAJI" << endl;
+    cout << left << setw(15) << nama ;
+    switch (posisi) {
+        case'A':
+        cout << setw(15) << A;
+        break;
+        case 'B':
+        cout << setw(15) <<B;
+        break;
+        case 'C':
+        cout << setw(15) <<C;
+        break;
+        case 'D':
+        cout << setw(15) <<D;
+        break;
+        case 'E':
+        cout << setw(15) <<E;
+        break;
+    }
+    cout << setw(15) << jamkerja;
+
+    switch (posisi) {
+        {
+            case 'A':
+            double gajia = jamkerja*50000;
+            cout << fixed << setprecision(0) << setw(10) << gajia;
+            break;
+        }
+        {
+            case 'B':
+            double gajib = jamkerja*75000;
+            cout << fixed << setprecision(0) << setw(10) << gajib;
+            break;
+        }
+        {
+            case 'C':
+            double gajic = jamkerja*100000;
+            cout <<fixed << setprecision(0) << setw(10) << gajic;
+            break;
+        }{
+            case 'D':
+            double gajid = jamkerja*125000;
+            cout << fixed << setprecision(0) << setw(10) << gajid;
+            break;
+        }{
+            case 'E':
+            double gajie = jamkerja*150000;
+            cout << fixed << setprecision(0) << setw(10) << gajie;
+            break;
+        }
+    
+    }
+    cout << endl << endl;
+    cout << "ketik 1 untuk ulangi.";
+    cin >> ulangi;
+
+    }while (ulangi == 1);
+    return 0;
+}
