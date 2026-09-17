@@ -1,0 +1,33 @@
+#include <iostream> 
+#include <iomanip> 
+#include <cmath> 
+using namespace std; 
+ 
+int main() { 
+    double angka1; 
+    double angka2; 
+    double angka3; 
+    double angka4; 
+    double angka5; 
+    
+    cout << "Masukan Angka 1: "; 
+    cin >> angka1; 
+    cout << "Masukan Angka 2: "; 
+    cin >> angka2; 
+    cout << "Masukan Angka 3: "; 
+    cin >> angka3; 
+    cout << "Masukan Angka 4: "; 
+    cin >> angka4; 
+    cout << "Masukan Angka 5: "; 
+    cin >> angka5; 
+ 
+    cout << fixed << setprecision(2);
+
+    double rataRata = (angka1 + angka2 + angka3 + angka4 + angka5) / 5; 
+    double standarDeviasi = sqrt(((angka1-rataRata) * (angka1-rataRata) + (angka2-rataRata) * (angka2-rataRata) + (angka3-rataRata) * (angka3-rataRata) + (angka4-rataRata) * (angka4-rataRata) + (angka5-rataRata) * (angka5-rataRata)) / 4); 
+ 
+    cout << "Rata-rata: " << rataRata << endl; 
+    cout << "Standar Deviasi: " << standarDeviasi << endl; 
+ 
+    return 0; 
+} 
