@@ -8,7 +8,8 @@ int main() {
     int pilihan;
     double rupiah, kurs, hasil;
     string mataUang;
-    
+
+
     cout << "1. Dolar Amerika (USD)\n";
     cout << "2. Euro (EUR)\n";
     cout << "3. Yen Jepang (JPY)\n";
@@ -17,8 +18,9 @@ int main() {
     cout << "6. Won Korea (KRW)\n";
     cout << "7. Ringgit Malaysia (MYR)\n";
     cout << "8. Baht Thailand (THB)\n";
-    cout << "Pilih mata uang tujuan (1-8):";
+    cout << "Pilih mata uang tujuan (1-8): ";
     cin >> pilihan;
+
     
     if (pilihan == 1) mataUang = "USD (Dolar)";
     else if (pilihan == 2) mataUang = "EUR (Euro)";
@@ -29,7 +31,22 @@ int main() {
     else if (pilihan == 7) mataUang = "MYR (Ringgit)";
     else if (pilihan == 8) mataUang = "THB (Baht)";
     else {
-        cout << "\nPilihan tidak valid! Program dihentikan. \n";
+        cout << "\nPilihan tidak valid! Program dihentikan.\n";
+        return 0;
+    }
+
+    
+    cout << "\nMasukkan nominal Rupiah (Rp)      : ";
+    cin >> rupiah;
+    cout << "Masukkan kurs 1 " << mataUang << " (Rp) : ";
+    cin >> kurs;
+
+    
+    hasil = rupiah / kurs;
+
+   
+    cout << fixed << setprecision(2);
+    cout << "Hasil Konversi : " << hasil << " " << mataUang << "\n";
     
     return 0;
 }
