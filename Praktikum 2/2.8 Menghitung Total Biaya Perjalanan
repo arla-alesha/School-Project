@@ -6,7 +6,6 @@ int main() {
     double jarakTempuh; 
     double konsumsiBahanBakar; 
     double hargaBahanBakar; 
-    double biayaBahanBakar = hargaBahanBakar * (jarakTempuh / konsumsiBahanBakar); 
 
     cout << "Masukan Jarak Tempuh: "; 
     cin >> jarakTempuh; 
@@ -14,6 +13,8 @@ int main() {
     cin >> konsumsiBahanBakar; 
     cout << "Masukan Harga Bahan Bakar: "; 
     cin >> hargaBahanBakar; 
+
+    double biayaBahanBakar = hargaBahanBakar * (jarakTempuh / konsumsiBahanBakar); 
     cout << "Total Biaya Bahan Bakar: " << fixed <<setprecision(2) << biayaBahanBakar << endl; 
 
 return 0; 
