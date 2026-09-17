@@ -1,0 +1,41 @@
+#include <iostream> 
+#include <iomanip> // Untuk manipulators 
+#include <string> 
+using namespace std; 
+
+int main() { 
+// Deklarasi variabel 
+    string fullName; 
+    int age; 
+    float height; 
+    double averageScore; 
+    bool isPassed; 
+
+// Hal yang dibutuhkan: Nama lengkap, usia, tinggi badan, nilai rata-rata, dan status kelulusan 
+// Input dari pengguna 
+    cout << "Masukkan Nama Lengkap: "; 
+    getline(cin, fullName); 
+ 
+    cout << "Masukkan Usia: "; 
+    cin >> age; 
+ 
+    cout << "Masukkan Tinggi Badan (cm): "; 
+    cin >> height; 
+ 
+    cout << "Masukkan Nilai Rata-Rata: "; 
+    cin >> averageScore; 
+ 
+    cout << "Apakah Lulus?"; 
+    cin >> isPassed; 
+    
+    // Output dengan format tabel 
+    cout << "\n"; 
+    cout << left; 
+    cout << setw(20) << "Nama Lengkap" << ": " << fullName << endl;  
+    cout << setw(20) << "Usia" << ": " << age << " tahun" << endl; 
+    cout << setw(20) << "Tinggi Badan" << ": " << fixed << setprecision(1) << height << " cm" << endl; 
+    cout << setw(20) << "Nilai Rata-Rata" << ": " <<fixed << setprecision(2) << averageScore << endl; 
+    cout << setw(20) << "Status Kelulusan" << ": " << (isPassed ? "Lulus" : "Tidak Lulus") << endl; 
+    
+return 0; 
+} 
