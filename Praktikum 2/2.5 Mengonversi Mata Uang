@@ -7,8 +7,10 @@ int main() {
 
     cout << "Masukkan jumlah rupiah: "; 
     cin >> rupiah; 
+    cout << "Masukkan kurs: "; 
+    cin >> rupiah; 
 
-    double kurs = 17580; 
+    double kurs = ; 
     double dolar = rupiah / kurs; 
     
     cout << fixed << setprecision(2); 
