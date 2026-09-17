@@ -1,0 +1,72 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int pilihan;
+    
+    cout << "1. Balok\n";
+    cout << "2. Tabung\n";
+    cout << "3. Kubus\n";
+    cout << "4. Kerucut\n";
+    cout << "Pilih bangun ruang (1-4): ";
+    
+    cin >> pilihan;
+
+    if (pilihan == 1) {
+        double p, l, t;
+        cout << "Masukkan panjang : "; cin >> p;
+        cout << "Masukkan lebar   : "; cin >> l;
+        cout << "Masukkan tinggi  : "; cin >> t;
+
+        double volume = p * l * t;
+        double luas = 2 * ((p * l) + (p * t) + (l * t));
+
+        cout << "\n--- Hasil Perhitungan Balok ---\n";
+        cout << "Volume        : " << volume << endl;
+        cout << "Luas Permukaan: " << luas << endl;
+
+    } else if (pilihan == 2) {
+        double r, t;
+        cout << "Masukkan jari-jari: "; cin >> r;
+        cout << "Masukkan tinggi   : "; cin >> t;
+
+        double volume = M_PI * r * r * t;
+        double luas = 2 * M_PI * r * (r + t);
+
+        cout << "\n--- Hasil Perhitungan Tabung ---\n";
+        cout << "Volume        : " << volume << endl;
+        cout << "Luas Permukaan: " << luas << endl;
+
+    } else if (pilihan == 3) {
+        double s;
+        cout << "Masukkan panjang sisi: "; cin >> s;
+
+        double volume = pow(s, 3);
+        double luas = 6 * pow(s, 2);
+
+        cout << "\n--- Hasil Perhitungan Kubus ---\n";
+        cout << "Volume        : " << volume << endl;
+        cout << "Luas Permukaan: " << luas << endl;
+
+    } else if (pilihan == 4) {
+        double r, t;
+        cout << "Masukkan jari-jari: "; cin >> r;
+        cout << "Masukkan tinggi   : "; cin >> t;
+
+        double s = sqrt(pow(r, 2) + pow(t, 2)); 
+        double volume = (1.0 / 3.0) * M_PI * pow(r, 2) * t;
+        double luas = M_PI * r * (r + s);
+
+        cout << "\n--- Hasil Perhitungan Kerucut ---\n";
+        cout << "Volume        : " << volume << endl;
+        cout << "Luas Permukaan: " << luas << endl;
+
+    } else {
+        cout << "Pilihan tidak valid!\n";
+    }
+
+    return 0;
+}
