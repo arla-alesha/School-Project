@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     int jumlahBarang;
-    double harga = 0;
+    double harga;
     double total = 0;
     double diskon = 0;
     double totalDiskon, hargaAkhir;
