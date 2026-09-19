@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    while (true) {
+        cout << "Masukkan angka positif untuk menghitung faktorial dan negatif untuk berhenti: ";
+        cin >> n;
+
+        if (n < 0) {
+            cout << "Program Selesai" << endl;
+            break;
+        }
+
+        long long faktorial = 1;
+
+        for (int i = 1; i <= n; i++) {
+            faktorial *= i;
+        }
+
+        cout << "Faktorial dari " << n << " adalah " << faktorial << endl;
+    }
+
+    return 0;
+}
