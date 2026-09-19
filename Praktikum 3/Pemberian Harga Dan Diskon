@@ -2,7 +2,6 @@
 #include <iomanip>
 using namespace std;
 
-
 int main() {
     int jumlahBarang;
     double harga = 0;
@@ -10,20 +9,16 @@ int main() {
     double diskon = 0;
     double totalDiskon, hargaAkhir;
 
-
     cout << "Masukkan jumlah barang: ";
     cin >> jumlahBarang;
-
 
     // Harga setiap barang
     for (int i = 1; i <= jumlahBarang; i++) {
         cout << "Masukkan harga barang ke-" << i << ": Rp";
         cin >> harga;
 
-
         total += harga;
     }
-
 
     // Menentukan diskon
     if (total > 500000) {
@@ -36,14 +31,12 @@ int main() {
         diskon = 0;
     }
 
-
     totalDiskon = total * diskon;
     hargaAkhir = total - totalDiskon;
 
-
-    // Menampilkan hasil
+    // Hasil
     cout << fixed << setprecision(2);
-    cout << "\n===== RINCIAN PEMBELIAN =====" << endl;
+    cout << "\n===== NOTA PEMBELIAN =====" << endl;
     cout << "Total harga sebelum diskon : Rp" << total << endl;
     cout << "Besaran diskon             : Rp" << totalDiskon << endl;
     cout << "Harga setelah diskon       : Rp" << hargaAkhir << endl;
