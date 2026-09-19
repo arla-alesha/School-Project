@@ -1,0 +1,63 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+double hitungAkarKuadrat(double n) {
+    if (n < 0) return 0.0; 
+    if (n == 0) return 0.0; 
+
+    double x = n;
+    double root = 0.5 * (x + (n / x));
+
+    while ((x - root) > 0.0001 || (root - x) > 0.0001) {
+        x = root;
+        root = 0.5 * (x + (n / x));
+    }
+    
+    return root;
+}
+
+int main() {
+    const int jumlah_angka = 5;
+    double angka[jumlah_angka];
+    double total = 0.0;
+    double rata_rata;
+    double total_varian = 0.0;
+    double standar_deviasi;
+    double varian;
+
+    cout << "Masukkan " << jumlah_angka << " angka:" << endl;
+    
+    for (int i = 0; i < jumlah_angka; i++) {
+        cout << "Angka ke-" << (i + 1) << ": ";
+        cin >> angka[i];
+        total += angka[i];
+    }
+
+    rata_rata = total / jumlah_angka;
+
+    for (int i = 0; i < jumlah_angka; i++) {
+        double selisih = angka[i] - rata_rata;
+        total_varian += (selisih * selisih); 
+    }
+
+    varian = total_varian / jumlah_angka;
+    standar_deviasi = hitungAkarKuadrat(varian);
+
+    cout << endl;
+    cout << "=== HASIL PERHITUNGAN ===" << endl;
+    cout << fixed << setprecision(2);
+    cout << "Rata-rata       : " << rata_rata << endl;
+    cout << "Standar Deviasi : " << standar_deviasi << endl;
+
+    if (standar_deviasi > 2.0) {
+        cout << "Kategori Variasi: Variasi Tinggi" << endl;
+    } else {
+        cout << "Kategori Variasi: Variasi Rendah" << endl;
+    }
+    
+    cout << "=========================" << endl;
+
+    return 0;
+}
