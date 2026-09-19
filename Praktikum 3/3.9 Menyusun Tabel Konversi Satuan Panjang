@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double meter;
+    int pilihan;
+
+    cout << "Masukkan nilai dalam meter: ";
+    cin >> meter;
+
+    cout << "\nPilih jenis konversi:" << endl;
+    cout << "1. Konversi ke Sentimeter (cm)" << endl;
+    cout << "2. Konversi ke Milimeter (mm)" << endl;
+    cout << "3. Konversi ke Kilometer (km)" << endl;
+    cout << "4. Tampilkan Tabel Konversi Lengkap (1 - 10 meter)" << endl;
+    cout << "Masukkan pilihan Anda (1-4): ";
+    cin >> pilihan;
+
+    cout << endl;
+
+    switch (pilihan) {
+        case 1:
+            cout << "Hasil: " << meter << " meter = " << (meter * 100) << " cm" << endl;
+            break;
+        case 2:
+            cout << "Hasil: " << meter << " meter = " << (meter * 1000) << " mm" << endl;
+            break;
+        case 3:
+            cout << "Hasil: " << meter << " meter = " << (meter / 1000.0) << " km" << endl;
+            break;
+        case 4:
+            cout << "============================================================" << endl;
+            cout << left << setw(10) << "Meter" << setw(15) << "Sentimeter" << setw(15) << "Milimeter" << setw(15) << "Kilometer" << endl;
+            cout << "============================================================" << endl;
+            cout << fixed << setprecision(3);
+            for (int i = 1; i <= 10; ++i) {
+                cout << left << setw(10) << i 
+                     << setw(15) << (i * 100) 
+                     << setw(15) << (i * 1000) 
+                     << setw(15) << (i / 1000.0) << endl;
+            }
+            cout << "============================================================" << endl;
+            break;
+        default:
+            cout << "Pilihan tidak valid! Silakan jalankan ulang program." << endl;
+    }
+
+    return 0;
+}
