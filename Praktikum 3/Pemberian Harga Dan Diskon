@@ -1,0 +1,53 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    int jumlahBarang;
+    double harga = 0;
+    double total = 0;
+    double diskon = 0;
+    double totalDiskon, hargaAkhir;
+
+
+    cout << "Masukkan jumlah barang: ";
+    cin >> jumlahBarang;
+
+
+    // Harga setiap barang
+    for (int i = 1; i <= jumlahBarang; i++) {
+        cout << "Masukkan harga barang ke-" << i << ": Rp";
+        cin >> harga;
+
+
+        total += harga;
+    }
+
+
+    // Menentukan diskon
+    if (total > 500000) {
+        diskon = 0.10;
+    }
+    else if (total >= 250000) {
+        diskon = 0.05;
+    }
+    else {
+        diskon = 0;
+    }
+
+
+    totalDiskon = total * diskon;
+    hargaAkhir = total - totalDiskon;
+
+
+    // Menampilkan hasil
+    cout << fixed << setprecision(2);
+    cout << "\n===== RINCIAN PEMBELIAN =====" << endl;
+    cout << "Total harga sebelum diskon : Rp" << total << endl;
+    cout << "Besaran diskon             : Rp" << totalDiskon << endl;
+    cout << "Harga setelah diskon       : Rp" << hargaAkhir << endl;
+
+
+    return 0;
+}
