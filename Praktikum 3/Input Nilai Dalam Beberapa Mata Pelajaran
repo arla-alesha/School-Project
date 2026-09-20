@@ -1,0 +1,50 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int jumlahNilai;
+    double nilai, total = 0, rataRata;
+
+    cout << "Masukkan jumlah mata pelajaran (minimal 3): ";
+    cin >> jumlahNilai;
+
+    // Memastikan jumlah nilai minimal 3
+    while (jumlahNilai < 3) {
+        cout << "Jumlah nilai minimal 3!" << endl;
+        cout << "Masukkan jumlah mata pelajaran: ";
+        cin >> jumlahNilai;
+    }
+
+    // Input nilai
+    for (int i = 1; i <= jumlahNilai; i++) {
+        cout << "Masukkan nilai mata pelajaran ke-" << i << ": ";
+        cin >> nilai;
+
+
+        total += nilai;
+    }
+
+    // Menghitung rata-rata
+    rataRata = total / jumlahNilai;
+
+    cout << fixed << setprecision(2);
+    cout << "\n===== HASIL PRESTASI =====" << endl;
+    cout << "Rata-rata nilai : " << rataRata << endl;
+
+    // Menentukan kategori prestasi
+    if (rataRata > 85) {
+        cout << "Kategori prestasi: Sangat Baik" << endl;
+    }
+    else if (rataRata >= 70) {
+        cout << "Kategori prestasi: Baik" << endl;
+    }
+    else if (rataRata >= 50) {
+        cout << "Kategori prestasi: Cukup" << endl;
+    }
+    else {
+        cout << "Kategori prestasi: Perlu Peningkatan" << endl;
+    }
+
+    return 0;
+}
