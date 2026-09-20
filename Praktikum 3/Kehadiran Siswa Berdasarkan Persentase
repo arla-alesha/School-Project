@@ -2,22 +2,17 @@
 #include <iomanip>
 using namespace std;
 
-
 int main() {
     int hadir;
     double persentase;
 
-
     cout << "Masukkan jumlah kehadiran selama 5 hari: ";
     cin >> hadir;
 
-
     persentase = (hadir / 5.0) * 100;
-
 
     cout << fixed << setprecision(2);
     cout << "Persentase kehadiran: " << persentase << "%" << endl;
-
 
     // Status kehadiran
     if (persentase > 75) {
@@ -29,7 +24,6 @@ int main() {
     else {
         cout << "Status: Kehadiran Kurang" << endl;
     }
-
 
     return 0;
 }
