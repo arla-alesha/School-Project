@@ -1,0 +1,41 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double kwh;
+    double tagihan;
+    double diskon = 0;
+    double tagihanAkhir;
+
+    cout << "Masukkan penggunaan listrik (kWh): ";
+    cin >> kwh;
+
+    // Perhitungan
+    if (kwh <= 100) {
+        tagihan = kwh * 1500;
+    }
+    else if (kwh <= 300) {
+        tagihan = kwh * 2000;
+    }
+    else {
+        tagihan = kwh * 3000;
+    }
+
+    // Memberikan diskon jika tagihan lebih dari Rp1.000.000
+    if (tagihan > 1000000) {
+        diskon = tagihan * 0.10;
+    }
+
+    tagihanAkhir = tagihan - diskon;
+
+    // Hasil
+    cout << fixed << setprecision(2);
+    cout << "\n===== TAGIHAN LISTRIK =====" << endl;
+    cout << "Total penggunaan listrik : " << kwh << " kWh" << endl;
+    cout << "Total tagihan sebelum diskon : Rp" << tagihan << endl;
+    cout << "Diskon yang diberikan        : Rp" << diskon << endl;
+    cout << "Total tagihan setelah diskon : Rp" << tagihanAkhir << endl;
+
+    return 0;
+}
