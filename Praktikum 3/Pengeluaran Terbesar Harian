@@ -1,0 +1,72 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+int main() {
+    string kategori;
+    double jumlah;
+
+    double makanan = 0;
+    double transportasi = 0;
+    double hiburan = 0;
+    double lainLain = 0;
+
+    double pengeluaranTerbesar = 0;
+    string kategoriTerbesar;
+
+    // Input pengeluaran selama 7 hari
+    for (int hari = 1; hari <= 7; hari++) {
+        cout << "\nHari ke-" << hari << endl;
+        cout << "Kategori (Makanan/Transportasi/Hiburan/Lain-lain): ";
+        cin >> kategori;
+
+        cout << "Jumlah pengeluaran: Rp";
+        cin >> jumlah;
+
+
+        // Menjumlahkan pengeluaran berdasarkan kategori
+        if (kategori == "Makanan") {
+            makanan += jumlah;
+        }
+        else if (kategori == "Transportasi") {
+            transportasi += jumlah;
+        }
+        else if (kategori == "Hiburan") {
+            hiburan += jumlah;
+        }
+        else if (kategori == "Lain-lain") {
+            lainLain += jumlah;
+        }
+        else {
+            cout << "Kategori tidak valid!" << endl;
+        }
+
+        // Mencari pengeluaran terbesar secara keseluruhan
+        if (jumlah > pengeluaranTerbesar) {
+            pengeluaranTerbesar = jumlah;
+            kategoriTerbesar = kategori;
+        }
+    }
+
+    // Menghitung total pengeluaran selama seminggu
+    double totalMingguan = makanan + transportasi + hiburan + lainLain;
+
+    cout << fixed << setprecision(2);
+
+    cout << "\n===== HASIL PENGELUARAN =====" << endl;
+    cout << "Total Makanan      : Rp" << makanan << endl;
+    cout << "Total Transportasi : Rp" << transportasi << endl;
+    cout << "Total Hiburan      : Rp" << hiburan << endl;
+    cout << "Total Lain-lain    : Rp" << lainLain << endl;
+
+    cout << "\nPengeluaran terbesar secara keseluruhan : Rp"
+         << pengeluaranTerbesar << endl;
+    cout << "Kategori pengeluaran terbesar           : "
+         << kategoriTerbesar << endl;
+
+    cout << "Total pengeluaran selama seminggu       : Rp"
+         << totalMingguan << endl;
+
+    return 0;
+}
